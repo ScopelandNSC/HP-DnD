@@ -16,9 +16,6 @@ const Character = ({}: CharacterProps) => {
     return (
         <Fragment>
             <h1>Character</h1>
-
-            <p>This is a simple example of a React component.</p>
-
             <Talents/>
         </Fragment>
     );

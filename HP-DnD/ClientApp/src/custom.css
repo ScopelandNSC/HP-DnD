@@ -1,9 +1,14 @@
 /* Provide sufficient contrast against white background */
-.talents-table {
-    display: flex;
-    flex-wrap: wrap;
+a {
+  color: #0366d6;
 }
 
-.talents-title-row {
-    flex: 1 1 auto;
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
 }

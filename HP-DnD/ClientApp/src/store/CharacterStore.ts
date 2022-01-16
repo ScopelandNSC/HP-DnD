@@ -4,13 +4,25 @@ import { Action, Reducer } from 'redux';
 // STATE - This defines the type of data maintained in the Redux store.
 export type SkillName = 
     'Brewing'
-    | 'Potions' 
-    | 'Poisons' 
+    | 'Potions Knowledge' 
+    | 'Poisons Knowledge' 
     | 'Herbology' 
     | 'Air' 
     | 'Fire' 
     | 'Earth' 
-    | 'Water';
+    | 'Water'
+    | 'Telekinesis' 
+    | 'Telepathy' 
+    | 'Divination' 
+    | 'Spectral Mediation'
+    | 'Offensive Charms' 
+    | 'Hexes' 
+    | 'Jinxes' 
+    | 'Curses'
+    | 'Defensive Charms' 
+    | 'Healing' 
+    | 'Counter Spells' 
+    | 'Shielding';
 
 export type SkillValue = 
     1
@@ -52,6 +64,9 @@ export type Skill = {
 export type TalentName = 
     'Alchemy' 
     | 'Elementalism'
+    | 'Psychic'
+    | 'Offensive Spells'
+    | 'Defensive Spells';
 
 export type Talent = {
   name: TalentName;
@@ -98,11 +113,11 @@ export const reducer: Reducer<CharacterState> = (state: CharacterState | undefin
                             value: 15
                         },
                         {
-                            name: 'Potions',
+                            name: 'Potions Knowledge',
                             value: 15
                         },
                         {
-                            name: 'Poisons',
+                            name: 'Poisons Knowledge',
                             value: 15
                         },
                         {

@@ -1,0 +1,38 @@
+.talent-section{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+
+  .skill-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .skill-name{
+      flex-direction: column;
+      flex: 4;
+    }
+
+    .skill-value{
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+    }
+
+    &.main-row{
+      font-size: large;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

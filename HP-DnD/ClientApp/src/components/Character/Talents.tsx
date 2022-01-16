@@ -5,7 +5,7 @@ import * as CharacterStore from '../../store/CharacterStore';
 import { range, filter, map } from 'rxjs';
 import React, { Fragment, useEffect } from 'react';
 import TalentGrid from './TalentGrid';
-import './Talents.css'
+import './Talents.scss'
 
 type CharacterProps =
     CharacterStore.CharacterState &
@@ -15,19 +15,21 @@ const TalentsTable = ({ talents }: CharacterProps) => {
 
     return (
         <div className='talents-table'>
-            <div className='talents-title-row'>
+            <div className='talents-table-row title'>
                 Talents
-            </div>            
-            { talents 
-                ? 
-                  talents.map((talent: CharacterStore.Talent) => {
-                    return (<TalentGrid
-                      talent={talent}
-                    />)
-                  })
-                : 
-                    null
-            }
+            </div>
+            <div className='talents-table-row'>
+                { talents 
+                    ? 
+                        talents.map((talent: CharacterStore.Talent) => {
+                          return (<TalentGrid
+                              talent={talent}
+                          />)
+                        })
+                    : 
+                        null
+                }
+            </div>
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import {Talent}  from '../../store/CharacterStore';
 import React, { Fragment, useEffect } from 'react';
+import './TalentGrid.scss';
 
 type Props = {
     talent: Talent;
@@ -7,9 +8,9 @@ type Props = {
 const TalentGrid = ({talent}: Props) => {
     return (
         <div className='talent-section'>
-            <div>
-                <div className='talent-title'> {talent.name} </div>
-                <div className='talent-value'>30</div>
+            <div className='skill-row main-row'>
+                <div className='skill-name'> {talent.name} </div>
+                <div className='skill-value'>30</div>
             </div>
         { talent.skills.map(skill => {
             return (
