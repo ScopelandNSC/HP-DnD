@@ -1,0 +1,9 @@
+/* Provide sufficient contrast against white background */
+.talents-table {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.talents-title-row {
+    flex: 1 1 auto;
+}
