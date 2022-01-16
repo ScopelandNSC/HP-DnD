@@ -22,7 +22,27 @@ export type SkillName =
     | 'Defensive Charms' 
     | 'Healing' 
     | 'Counter Spells' 
-    | 'Shielding';
+    | 'Shielding'
+    | 'Tracking'
+    | 'Harvesting' 
+    | 'Transfiguration' 
+    | 'Riding' 
+    | 'Charm' 
+    | 'Intimidate' 
+    | 'Deception' 
+    | 'Performance'
+    | 'Speed' 
+    | 'Strength' 
+    | 'Agility' 
+    | 'Resistance'
+    | 'Sneaking' 
+    | 'Sleight Of Hand' 
+    | 'Perception' 
+    | 'Apparition'
+    | 'Muggle Technology' 
+    | 'Crafting' 
+    | 'Scavenging' 
+    | 'Enchanting';
 
 export type SkillValue = 
     1
@@ -66,7 +86,12 @@ export type TalentName =
     | 'Elementalism'
     | 'Psychic'
     | 'Offensive Spells'
-    | 'Defensive Spells';
+    | 'Defensive Spells'
+    | 'Beast Handling' 
+    | 'Charisma'
+    | 'Physicality'
+    | 'Stealth'
+    | 'Magitech';
 
 export type Talent = {
   name: TalentName;
@@ -103,52 +128,9 @@ export const actionCreators = {
 
 export const reducer: Reducer<CharacterState> = (state: CharacterState | undefined, incomingAction: Action): CharacterState => {
     if (state === undefined) {
-        return { 
-            talents: [
-                { 
-                    name: 'Alchemy',
-                    skills: [
-                        {
-                            name: 'Brewing',
-                            value: 15
-                        },
-                        {
-                            name: 'Potions Knowledge',
-                            value: 15
-                        },
-                        {
-                            name: 'Poisons Knowledge',
-                            value: 15
-                        },
-                        {
-                            name: 'Herbology',
-                            value: 15
-                        }
-                    ]
-                },
-                {
-                    name: 'Elementalism',
-                    skills: [
-                        {
-                            name: 'Air',
-                            value: 15
-                        },
-                        {
-                            name: 'Fire',
-                            value: 15
-                        },
-                        {
-                            name: 'Water',
-                            value: 15
-                        },
-                        {
-                            name: 'Earth',
-                            value: 15
-                        }
-                    ]
-                }
-            ]
-        };
+        return {
+            talents: defaultTalents
+        }
     }
 
     const action = incomingAction as KnownAction;
@@ -159,3 +141,217 @@ export const reducer: Reducer<CharacterState> = (state: CharacterState | undefin
             return state;
     }
 };
+
+const defaultTalents: Talent[] = 
+[
+    { 
+        name: 'Alchemy',
+        skills: [
+            {
+                name: 'Brewing',
+                value: 10
+            },
+            {
+                name: 'Potions Knowledge',
+                value: 12
+            },
+            {
+                name: 'Poisons Knowledge',
+                value: 14
+            },
+            {
+                name: 'Herbology',
+                value: 16
+            }
+        ]
+    },
+    {
+        name: 'Elementalism',
+        skills: [
+            {
+                name: 'Air',
+                value: 15
+            },
+            {
+                name: 'Fire',
+                value: 15
+            },
+            {
+                name: 'Water',
+                value: 15
+            },
+            {
+                name: 'Earth',
+                value: 15
+            }
+        ]
+    },
+    {
+        name: 'Psychic',
+        skills: [
+            {
+                name: 'Divination',
+                value: 15
+            },
+            {
+                name: 'Spectral Mediation',
+                value: 15
+            },
+            {
+                name: 'Telepathy',
+                value: 15
+            },
+            {
+                name: 'Telekinesis',
+                value: 15
+            }
+        ]
+    },
+    {
+        name: 'Offensive Spells',
+        skills: [
+            {
+                name: 'Offensive Charms',
+                value: 15
+            },
+            {
+                name: 'Hexes',
+                value: 15
+            },
+            {
+                name: 'Curses',
+                value: 15
+            },
+            {
+                name: 'Jinxes',
+                value: 15
+            }
+        ]
+    },
+    {
+        name: 'Defensive Spells',
+        skills: [
+            {
+                name: 'Defensive Charms',
+                value: 15
+            },
+            {
+                name: 'Counter Spells',
+                value: 15
+            },
+            {
+                name: 'Healing',
+                value: 15
+            },
+            {
+                name: 'Shielding',
+                value: 15
+            }
+        ]
+    },
+    {
+        name: 'Beast Handling',
+        skills: [
+            {
+                name: 'Transfiguration',
+                value: 15
+            },
+            {
+                name: 'Harvesting',
+                value: 15
+            },
+            {
+                name: 'Tracking',
+                value: 15
+            },
+            {
+                name: 'Riding',
+                value: 15
+            }
+        ]
+    },
+    {
+        name: 'Charisma',
+        skills: [
+            {
+                name: 'Charm',
+                value: 15
+            },
+            {
+                name: 'Intimidate',
+                value: 15
+            },
+            {
+                name: 'Deception',
+                value: 15
+            },
+            {
+                name: 'Performance',
+                value: 15
+            }
+        ]
+    },
+    {
+        name: 'Physicality',
+        skills: [
+            {
+                name: 'Speed',
+                value: 15
+            },
+            {
+                name: 'Agility',
+                value: 15
+            },
+            {
+                name: 'Strength',
+                value: 15
+            },
+            {
+                name: 'Resistance',
+                value: 15
+            }
+        ]
+    },
+    {
+        name: 'Stealth',
+        skills: [
+            {
+                name: 'Sneaking',
+                value: 15
+            },
+            {
+                name: 'Sleight Of Hand',
+                value: 15
+            },
+            {
+                name: 'Perception',
+                value: 15
+            },
+            {
+                name: 'Apparition',
+                value: 15
+            }
+        ]
+    },
+    {
+        name: 'Magitech',
+        skills: [
+            {
+                name: 'Muggle Technology',
+                value: 15
+            },
+            {
+                name: 'Crafting',
+                value: 15
+            },
+            {
+                name: 'Scavenging',
+                value: 15
+            },
+            {
+                name: 'Enchanting',
+                value: 15
+            }
+        ]
+    } 
+]
