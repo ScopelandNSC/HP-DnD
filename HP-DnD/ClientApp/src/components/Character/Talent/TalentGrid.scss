@@ -3,7 +3,8 @@
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-
+  min-width: 200px;
+  
   .skill-row{
     display: flex;
     flex-direction: row;

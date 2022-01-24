@@ -1,0 +1,25 @@
+.talent-panel{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+  flex: 1;
+  align-self: flex-end;
+  
+  .panel-title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: x-large;
+    font-weight: bold;
+  }
+}
+
+
+
+
+
+
+
+
+

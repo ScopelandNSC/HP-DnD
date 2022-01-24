@@ -4,7 +4,7 @@ import { ApplicationState } from '../store';
 import * as CharacterStore from '../store/CharacterStore';
 import { range, filter, map } from 'rxjs';
 import React, { Fragment, useEffect } from 'react';
-import Talents from '../components/Character/Talents';
+import TalentsPanel from '../components/Character/Talent/TalentsPanel';
 
 type CharacterProps =
     CharacterStore.CharacterState &
@@ -16,7 +16,7 @@ const Character = ({}: CharacterProps) => {
     return (
         <Fragment>
             <h1>Character</h1>
-            <Talents/>
+            <TalentsPanel/>
         </Fragment>
     );
 };

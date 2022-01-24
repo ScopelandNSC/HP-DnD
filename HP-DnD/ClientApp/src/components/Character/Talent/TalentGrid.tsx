@@ -1,4 +1,4 @@
-import {Skill, Talent}  from '../../store/CharacterStore';
+import {Skill, Talent}  from '../../../store/CharacterStore';
 import React, { Fragment, useEffect, useState } from 'react';
 import './TalentGrid.scss';
 
@@ -24,7 +24,7 @@ const TalentGrid = ({talent}: Props) => {
             </div>
         { talent.skills.map(skill => {
             return (
-                <div className='skill-row'>
+                <div className='skill-row' key={skill.name}>
                     <div className='skill-name' >{skill.name}</div>
                     <div className='skill-value'>{skill.value}</div>
                 </div>

@@ -1,0 +1,21 @@
+
+.talents-table-row
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .talents-table {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+  
+  &.title{
+    font-size: x-large;
+    font-weight: bold;
+  }
+}
+
